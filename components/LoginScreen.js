@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, Image, Button, TextInput, TouchableOpacity } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [username, onChangeUser] = React.useState('hocvien123');
   const [password, onChangePass] = React.useState('');
 
@@ -67,7 +67,8 @@ export default function LoginScreen() {
           <Button
             color="#ff7f45"
             onPress={() => {
-              alert('Đăng nhập thành công!');
+              navigation.navigate('Dashboard');
+              // alert('Đăng nhập thành công!');
             }}
             title="Đăng nhập"
           />
