@@ -3,15 +3,12 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, Image, Button, TextInput, TouchableOpacity } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import LoginScreen from "./components/LoginScreen"
-
-export default function App() {
-  
+export default function Dashboard() {
   return (
-    
-      <LoginScreen />
+        
+      <View style={{flex: 1}}>
+        <Text>DashBoard</Text>
+      </View>
     
   );
 }
-
-
