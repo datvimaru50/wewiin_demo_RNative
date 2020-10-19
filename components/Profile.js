@@ -4,9 +4,13 @@ import { StyleSheet, Text, View, Image, Button, TextInput, TouchableOpacity, Fla
 import { ScrollView } from 'react-native-gesture-handler';
 
 
+import { RNCamera } from 'react-native-camera';
+
 const GUTTER = 15;
 
 export default function Profile() {
+  // let camera;
+
   return (
     <View style={{flex: 1, padding: GUTTER}}>
         <View style={styles.avatar}>
@@ -28,10 +32,22 @@ export default function Profile() {
         </View>
 
         <View>
-            <Text>Họ và tên: Vũ Quốc Đạt</Text>
+            <Text>Họ và tên: Vu quoc Dat</Text>
             <Text>Ngày sinh: 11-11-1991</Text>
             <Text>Giới tính: Nam</Text>
         </View>
+
+        <RNCamera 
+          ref={ref => {this.camera = ref}}
+          captureAudio={false}
+          style={{height: 200, width: '100%'}}
+          androidCameraPermissionOptions={{
+            title: 'Permission to use camera',
+            message: 'We need your permission to use your camera',
+            buttonPositive: 'Ok',
+            buttonNegative: 'Cancel',
+          }}
+        />
     </View>
   );
 }

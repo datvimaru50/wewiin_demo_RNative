@@ -16,7 +16,7 @@ export default function Dashboard({navigation}) {
         <View style={{flex: 1}}>
             <ScrollView>
 
-                <Text style={styles.courseGroupTitle}>Khóa học ngôn ngữ</Text>
+                <Text style={styles.courseGroupTitle}>Khóa học NN</Text>
 
                 <ScrollView horizontal style={{paddingLeft: GUTTER}}>
                     <CourseItem 
